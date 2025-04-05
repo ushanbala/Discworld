@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Task Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <style>
+        .character-gif {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            animation: idle 3s infinite;
+        }
+        @keyframes idle {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        .working { animation: work 1s infinite; }
+        @keyframes work {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .error {
+            animation: shake 0.5s infinite;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(0); }
+            75% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto p-4">
+        <h1 class="text-center text-4xl font-bold mb-6">Disc World</h1>
+        <div class="flex flex-col items-center mb-8">
+            <input id="taskInput" type="text" placeholder="Enter a task for the CEO" class="px-4 py-2 rounded-lg text-black w-3/4 max-w-lg" />
+            <button id="assignTaskBtn" class="mt-4 px-6 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition">Assign Task</button>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center">
+            <div class="text-center">
+                <h2 class="text-xl font-semibold mb-2">CEO</h2>
+                <img id="ceoGif" src="./ceo.gif" alt="CEO" class="character-gif" />
+                <p id="ceoTask" class="mt-2 text-sm text-gray-300">Idle...</p>
+                <button id="automateBtn" class="mt-4 px-6 py-2 bg-green-500 rounded-lg hover:bg-green-600 transition">Automate</button>
+                
+            </div>
+            
+            <div class="text-center">
+                <h2 class="text-xl font-semibold mb-2">Lisa</h2>
+                <img id="melGif" src="mel.gif" alt="Mel" class="character-gif" />
+                <p id="melTask" class="mt-2 text-sm text-gray-300">Idle...</p>
+            </div>
+            <div class="text-center">
+                <h2 class="text-xl font-semibold mb-2">Yuki</h2>
+                <img id="jamesGif" src="./gif.gif" alt="James" class="character-gif" />
+                <p id="jamesTask" class="mt-2 text-sm text-gray-300">Idle...</p>
+            </div>
+        </div>
+        <div id="results" class="mt-10 p-4 bg-gray-800 rounded-lg hidden">
+            <h2 class="text-xl font-bold mb-4">Task Results:</h2>
+            <div id="resultContent" class="text-gray-300"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

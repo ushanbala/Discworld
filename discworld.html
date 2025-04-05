@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disc-World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container p-4 flex flex-col md:flex-row gap-4">
+
+        <div class="office-container bg-gray-800 rounded-lg p-4 w-full  h-[600px]">
+                <img src="./imgs/office.png" class="office" alt="">
+                <img src="./imgs/ceo.gif" class="ceo" alt="">
+                <img src="./imgs/1.gif" class="lisa" alt="">
+                <img src="./imgs/2.gif" class="yuki" alt="">
+                <img src="./imgs/vec1.png" class="vec1" alt="">
+                <img src="./imgs/vec2.png" class="vec2" alt="">
+                <img src="./imgs/vec3.png" class="vec3" alt="">
+            </div>
+
+        <div class="w-full md:w-2/5 flex flex-col gap-4 menuu">
+            <div class=" p-4">
+                <h1 class="text-gray-800 text-4xl font-bold text-center">DISC-WORLD</h1>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 flex flex-col gap-2">
+                <input type="text" id="taskInput" placeholder="Insert Tasks" class="bg-gray-600 text-white rounded p-2 focus:outline-none focus:ring focus:ring-blue-300">
+                <button id="assign"  class="btn text-white rounded p-2">Assign</button>
+                
+                <button id="automate" class="btn text-white rounded p-2">Automate</button>
+                
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 w h-[100px]">
+                <img src="./imgs/yuki_idle.gif" class="yuki-idle" id="yukiIdle" >
+                    <p class="yuki-sts text-white text-2xl">Yuki</p>
+                    <p class="sts-text text-gray-300 text-2xl" id="yukiTask">Idle...</p>
+
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 w h-[100px]">
+                <img src="./imgs/lisa_idle.gif" class="lisa-idle" id="lisaIdle">
+                    <p class="lisa-sts text-white text-2xl">Lisa</p>
+                    <p class="sts-text text-gray-300 text-2xl" id="lisaTask">Idle...</p>
+
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 w h-[100px]">
+                <img src="./imgs/ceo_idle.gif" class="ceo-idle" id="ceoIdle">
+                    <p class="ceo-sts text-white text-2xl">CEO</p>
+                    <p class="sts-text text-gray-300 text-2xl" id="ceoTask">Idle...</p>
+            </div>
+        </div>
+        <div class="tasksMenu">
+            <img src="./imgs/filled-cancel.png" class="closebtn" alt="">
+            <div class="task_results" id="task_results">
+
+            </div>
+        </div>
+        
+        <button class="openTasks">Tasks</button>
+        <script src="script.js"></script>
+</body>
+</html>

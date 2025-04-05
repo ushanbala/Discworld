@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", serif;
+}
+html{
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: url(./imgs/bg.png);
+}
+
+.btn{
+    background: #468067;
+    transition: 0.5s all;
+}
+.btn:hover{
+    background: rgb(50, 81, 50);
+    transition: 0.5s all;
+}
+.office-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.office{
+    width: 60%;
+}
+.ceo{
+    position: absolute;
+    top: 28%;
+    left: 20%;
+    width: 8vh;
+}
+.lisa{
+    position: absolute;
+    top: 52%;
+    left: 35%;
+    width: 8vh;
+}
+.yuki{
+    position: absolute;
+    top: 52%;
+    left: 25%;
+    width: 8vh;
+}
+.vec1{
+    
+    position: absolute;
+    width: 50vh;
+    right: 37%;
+}
+.vec2{
+    
+    position: absolute;
+    width: 30vh;
+    left: 5%;
+    top: 10%;
+}
+.vec3{
+    
+    position: absolute;
+    width: 50vh;
+    left: 2%;
+    top: 46%;
+}
+.yuki-idle{
+    width: 8vh;
+    position: absolute;
+    top: 40%;
+}
+.yuki-sts{
+    position: absolute;
+    right: 10%;
+
+}
+.lisa-idle{
+    width: 8vh;
+    position: absolute;
+    top: 57%;
+}
+.lisa-sts{
+    position: absolute;
+    right: 10%;
+
+}
+
+.ceo-idle{
+    width: 8vh;
+    position: absolute;
+    top: 74%;
+}
+.ceo-sts{
+    position: absolute;
+    right: 10%;
+
+}
+.sts-text{
+    position: relative;
+    left: 40%;
+    top: 40%;
+
+}
+.tasksMenu{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.93);
+    display: none;
+    z-index: 10000;
+    transition: 0.5s all;
+}
+.closebtn{
+    width: 5vh;
+    margin: 2vh;
+    cursor: pointer;
+}
+.task_results {
+    width: 98%;
+    height: 80vh;
+    background-color: rgb(53, 91, 77);
+    margin: 2vh;
+    border-radius: 2vh;
+    overflow-y: auto; /* Add scrollbar if content overflows */
+    padding: 10px; /* Add some padding */
+}
+
+.task-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    margin-bottom: 5px; /* Spacing between list items */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    color: white; /* White text for better contrast */
+    font-family: monospace; /* Monospace font for better readability */
+    word-wrap: break-word; /* handle long text */
+}
+
+/* Optional: Add hover effect */
+.task-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: default;
+}
+.openTasks{
+    position: absolute;
+    right: 0.5%;
+    top: 5%;
+    background: rgb(87, 56, 56);
+    padding: 1vh 3vh;
+    border: none;
+    color: white;
+    border-radius: 1vh;
+    transition: 0.5s all;
+}
+.openTasks:hover{
+    background: #2e2c2c;
+    transition: 0.5s all;
+}
