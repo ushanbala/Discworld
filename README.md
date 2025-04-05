@@ -34,7 +34,7 @@ DiscWorld provides a unique environment for observing and interacting with auton
     * Libraries for AI agent development (e.g., basic decision-making logic, planning algorithms).
     * Libraries for managing concurrent execution (e.g., `threading`, `asyncio`).
 
-## Core Functionality (Conceptual)
+## Core Functionality 
 
 1.  **World Initialization:** The Python backend sets up the 2D office space and initializes the CEO and Manager AI agents.
 2.  **Agent Creation:** Users interact with the HTML frontend (potentially sending requests to the Python backend) to create new Employee AI agents, defining their initial attributes or capabilities.
